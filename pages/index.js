@@ -9,7 +9,8 @@ const Home = ({ products, bannerData }) => {
     <>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
 
-      {console.log(products)}
+      {/* {console.log(products)} */}
+
       <div className="products-heading">
         <h2>Best Selling Products</h2>
         <p>Speakers of many variations</p>
@@ -19,7 +20,7 @@ const Home = ({ products, bannerData }) => {
           <Product key={product._id} product={product} />
         ))}
       </div>
-      <FooterBanner />
+      <FooterBanner footerBanner={bannerData && bannerData[0]} />
     </>
   );
 };
